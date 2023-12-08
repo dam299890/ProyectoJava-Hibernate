@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="1153.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controlador.HelloController">
+  <children>
+    <MenuBar prefHeight="25.0" prefWidth="891.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane prefHeight="551.0" prefWidth="244.0">
+          <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Master" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+              </textFill>
+            </Label>
+                  <Button fx:id="ingresarRef" layoutX="40.0" layoutY="208.0" mnemonicParsing="false" onAction="#ingresarRef" text="Ingresar Referencia" />
+                  <Button fx:id="visualizarRef" layoutX="34.0" layoutY="263.0" mnemonicParsing="false" onAction="#visualizarRef" text="Visualizar Referencias" />
+                  <Button fx:id="vistaGenerarDoc" layoutX="37.0" layoutY="317.0" mnemonicParsing="false" onAction="#vistaGenerarDoc" text="Generar Documento" />
+          </children>
+        </AnchorPane>
+        <ScrollPane prefHeight="551.0" prefWidth="883.0">
+          <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="856.0">
+              <children>
+                        <Text layoutX="320.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORME" textAlignment="CENTER" wrappingWidth="194.099609375">
+                           <font>
+                              <Font name="Serif Regular" size="37.0" />
+                           </font>
+                        </Text>
+                        <Pane fx:id="panelGenerarDoc" layoutX="10.0" layoutY="66.0" prefHeight="416.0" prefWidth="780.0">
+                           <children>
+                              <ComboBox fx:id="menuRefToDocument" layoutX="85.0" layoutY="36.0" prefWidth="150.0" promptText="Referencias" />
+                              <ComboBox fx:id="menuPlantillas" layoutX="529.0" layoutY="36.0" prefWidth="150.0" promptText="Plantillas" />
+                              <Button fx:id="generarDocButton" layoutX="331.0" layoutY="99.0" mnemonicParsing="false" onAction="#generarDoc" prefHeight="39.0" prefWidth="118.0" text="Generar" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="panelIngresarRef" layoutX="11.0" layoutY="53.0" prefHeight="484.0" prefWidth="813.0" visible="false">
+                           <children>
+                              <GridPane fx:id="gpIngresoRef" layoutX="80.0" layoutY="14.0" prefHeight="323.0" prefWidth="216.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="159.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="80.0" text="Referencia" />
+                                    <Label text="Peso Inicial" GridPane.rowIndex="1" />
+                                    <Label text="Peso Final" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtRef" GridPane.columnIndex="1" />
+                                    <TextField fx:id="txtPesoIni" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtPesoFi" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Número Informe" GridPane.rowIndex="3" />
+                                    <Label text="Temperatura" GridPane.rowIndex="4" />
+                                    <Label text="Humedad" GridPane.rowIndex="5" />
+                                    <Label text="Alcance Extracción" GridPane.rowIndex="6" />
+                                    <Label text="Resultado Muestra" GridPane.rowIndex="7" />
+                                    <TextField fx:id="txtNuevoInf" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtTemp" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtHumedad" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="txtAlcance" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField fx:id="txtResultMuestra" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                 </children>
+                              </GridPane>
+                              <GridPane fx:id="gpIngresoRef2" layoutX="446.0" layoutY="14.0" prefHeight="166.0" prefWidth="222.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="159.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="95.0" text="Residuo Blanco" />
+                                    <Label text="Resultado Blanco" GridPane.rowIndex="1" />
+                                    <Label text="Estado Muestra" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtResiduoBlanco" GridPane.columnIndex="1" />
+                                    <TextField fx:id="txtResultBlanco" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtEstadoMuestra" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Estado Blanco" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtEstadoBlanco" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <Button fx:id="ingresarDatos" layoutX="446.0" layoutY="279.0" mnemonicParsing="false" onAction="#ingresarDatos" prefHeight="45.0" prefWidth="87.0" text="Ingresar" />
+                              <TextArea fx:id="txtComents" layoutX="80.0" layoutY="382.0" prefHeight="70.0" prefWidth="509.0" />
+                              <Label fx:id="labelObs" layoutX="80.0" layoutY="337.0" prefHeight="25.0" prefWidth="124.0" text="Observaciones:" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="panelVisualizarRef" layoutX="5.0" layoutY="53.0" prefHeight="492.0" prefWidth="848.0" visible="false">
+                           <children>
+                              <TableView fx:id="tableRefs" layoutX="6.0" layoutY="69.0" prefHeight="418.0" prefWidth="837.0">
+                                <columns>
+                                  <TableColumn fx:id="columFecha" prefWidth="45.0" text="Fecha" />
+                                  <TableColumn fx:id="columPesoIni" prefWidth="76.0" text="Peso Ini." />
+                                    <TableColumn fx:id="columPesoFin" prefWidth="48.0" text="Peso Fin" />
+                                    <TableColumn fx:id="columDif" prefWidth="32.0" text="Diferencia" />
+                                    <TableColumn fx:id="columRef" prefWidth="47.0" text="Referencia" />
+                                    <TableColumn fx:id="columStatus" prefWidth="37.0" text="Status" />
+                                    <TableColumn fx:id="columObs" prefWidth="51.0" text="Observacion" />
+                                    <TableColumn fx:id="columNInforme" prefWidth="60.0" text="N. Informe" />
+                                    <TableColumn fx:id="columTemp" minWidth="0.0" prefWidth="46.0" text="Temperatura" />
+                                    <TableColumn fx:id="columHR" minWidth="0.0" prefWidth="25.0" text="HR" />
+                                    <TableColumn fx:id="columAlcance" prefWidth="38.0" text="Alcance" />
+                                    <TableColumn fx:id="columRMuestra" prefWidth="75.0" text="R. Muestra" />
+                                    <TableColumn fx:id="columResiduoBlanco" prefWidth="56.0" text="Residuo B." />
+                                    <TableColumn fx:id="columResultadoBlanco" prefWidth="65.0" text="R. Blanco" />
+                                    <TableColumn fx:id="columStatusMuestra" prefWidth="60.0" text="Status Muestra" />
+                                    <TableColumn fx:id="columStatusBlanco" prefWidth="59.0" text="Status B." />
+                                </columns>
+                              </TableView>
+                              <MenuButton fx:id="menuRef" layoutX="363.0" layoutY="26.0" mnemonicParsing="false" text="Referencias" />
+                           </children>
+                        </Pane>
+              </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

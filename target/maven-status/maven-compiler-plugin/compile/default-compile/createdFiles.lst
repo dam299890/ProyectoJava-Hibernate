@@ -1,0 +1,5 @@
+com\example\conexion\Informacion.class
+module-info.class
+com\example\fx\HelloApplication.class
+com\example\fx\PruebaBD.class
+com\example\fx\HelloController.class
